@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="loader">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          MY SHOP
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-lg btn-primary text-white position-relative animate__animated" type="button" data-bs-toggle="offcanvas" data-bs-target="#BoughtItem" aria-controls="BoughtItem" id="CusBoughted-count">
+              <i class=" bi bi-cart me-1 fs-4"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger Order-item-count">
+                0
+              </span>
+              <!-- <span class=" text-uppercase">Cart</span> -->
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <section class=" container mt-5">
+      <div class=" row min-vh-100 g-3 justify-content-center align-items-center" id="main">
+      </div>
+    </section>
+    <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="BoughtItem" aria-labelledby="BoughtItemLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="BoughtItemLabel">
+          Shop
+          <span class=" btn-sm btn btn-primary Order-item-count">0</span>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      </div>
+      <div class=" offcanvas-bottom border p-3 border-2 shadow-sm">
+        <div class=" mb-3 d-flex justify-content-between">
+          <p class=" mb-0 text-uppercase">Total Cost</p>
+          <p class=" mb-0 fw-bold">$ <span id="total">0</span></p>
+        </div>
+        <button class=" btn btn-primary w-100">
+          CheckOut
+        </button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
